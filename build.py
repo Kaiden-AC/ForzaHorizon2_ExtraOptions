@@ -44,6 +44,7 @@ COMMON_SOURCES = [
     "features/sun_shadows.c",
     "features/livery.c",
     "features/media_overrides.c",
+    "features/no_damage.c",
     "features/vehicle_controls.c",
     "features/blinkers.c",
     "features/aero_tuning.c",

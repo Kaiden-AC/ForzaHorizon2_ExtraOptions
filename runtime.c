@@ -44,6 +44,10 @@ static void log_enabled_features(const wchar_t *settings_directory, const ModOpt
     log_append("VEHICLE: right-stick press toggles headlights; stationary "
                "2-second hold toggles "
                "supported roofs.\r\n");
+    if (options->no_visible_damage) {
+        log_append("DAMAGE: the player car's visible damage is reset every frame; "
+                   "mechanical damage is unchanged.\r\n");
+    }
     log_append("SETTINGS: Video and HUD menu hooks installed; awaiting menu "
                "resources.\r\n");
     if (options->custom_gamerpic) {

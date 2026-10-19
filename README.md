@@ -27,6 +27,7 @@ An individual or group of people is trying to use Forza Horizon 2 and the mod's 
  - Toggle for having the minimap follow the orbit camera.
  - Bypass for Azimuth's save data checks.
  - Custom Gamerpic support.
+ - Optional removal of the player car's visible damage.
 
 # Installation
 
@@ -69,9 +70,14 @@ Note: Some cars have glitched turn signals. More info here: [Turn Signals Wiki P
 ### Roofs
 Roofs can be toggled by pressing and holding the right-stick for 3 seconds while stationary. More info here: [Roof Toggle Wiki Page](https://github.com/RokkuDayo/ForzaHorizon2_ExtraOptions/wiki/Roofs)
 
+### Damage
+Set "PlayerNoVisibleDamage" to 1 under the "Gameplay" section of the INI to stop the player's car from showing dents, scrapes, cracked glass or detached body parts. Only the visual damage is cleared; the simulated/mechanical damage model and every other car are left untouched. The setting is off by default.
+
 # Custom gamerpic 
 You can edit the "Gamerpic.png" image located where you extracted the mod files to with any image you like and it will be used as your avatar in-game.
 The maximum dimensions supported are 2048x2048 and the image must weight less than 16 megabytes.
 
 # AI Usage Disclosure
 Codex was used in this project to create the DLL. The actual research was done manually, mostly based on things I already toyed with in the other titles from the series, but I don't yet have the C language knowledge to code something like this fully from scratch (I was initially editing the raw executable). Leaving this here as I believe people have the right to know.
+
+The player no-visible-damage option was added with the help of DeepSeek V4.1 Flash.

@@ -89,6 +89,7 @@ typedef struct {
     int reserved_motion_blur_override;
     int reserved_filtering_override;
     int photo_mode_samples;
+    int no_visible_damage;
     int enable_social, enable_clubs, enable_rivals;
 } ModOptions;
 #endif

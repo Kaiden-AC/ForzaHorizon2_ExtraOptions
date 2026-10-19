@@ -2,6 +2,7 @@
 #include "blinkers.h"
 #include "autodrive_game.h"
 #include "features.h"
+#include "no_damage.h"
 #include "roof_fade.h"
 #include "support.h"
 
@@ -554,6 +555,7 @@ static void vehicle_update(void *self, float dt, float frame_dt, unsigned frame)
     }
     ((CarUpdate)(game_image + 0x2a9400))(self, dt, frame_dt, frame);
     if (owned) {
+        no_damage_tick(self);
         maintain_controls(self);
     }
     if (owned) {

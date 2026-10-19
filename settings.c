@@ -23,6 +23,7 @@ const SettingDefinition setting_definitions[] = {
             SETTING_BOOLEAN),
     SETTING("Profile", "CustomGamerpic", custom_gamerpic, SETTING_BOOLEAN),
     SETTING("PhotoMode", "FreeCamera", free_photo_camera, SETTING_BOOLEAN),
+    SETTING("Gameplay", "PlayerNoVisibleDamage", no_visible_damage, SETTING_BOOLEAN),
     SETTING("Files", "EnableMediaOverrides", media_overrides, SETTING_BOOLEAN),
     {"Autodrive", "Enabled", "AutodriveEnabled", offsetof(ModOptions, autodrive), SETTING_BOOLEAN},
 };
@@ -78,6 +79,7 @@ void settings_defaults(ModOptions *options) {
         .enable_clubs = 1,
         .enable_rivals = 1,
         .photo_mode_samples = 0,
+        .no_visible_damage = 0,
     };
 }
 

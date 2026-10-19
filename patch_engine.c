@@ -1,6 +1,7 @@
 #include "patch_engine.h"
 #include "features.h"
 #include "features/autodrive_notice.h"
+#include "features/no_damage.h"
 #include "features/roof_fade.h"
 #include "patches_generated.h"
 #include "support.h"
@@ -350,6 +351,7 @@ static void commit_feature_options(const ModOptions *options) {
     drift_camera_commit_options(options);
     photo_sampling_commit_options();
     minimap_set_follow_camera(options->minimap_follows_camera);
+    no_damage_set_enabled(options->no_visible_damage);
 }
 
 static int commit_transaction(const PatchTransaction *transaction) {
@@ -406,6 +408,7 @@ int patch_engine_apply(unsigned char *game_image, const ModOptions *options) {
     drift_camera_prepare_hook(game_image);
     video_options_prepare_hooks(game_image);
     media_overrides_prepare_hook(game_image);
+    no_damage_bind(game_image);
     autodrive_prepare_hooks(game_image, options);
 
     PatchTransaction transaction;
